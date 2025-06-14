@@ -96,7 +96,7 @@ function About() {
         <img
           src={Developer}
           alt="about"
-          className="scale-125 hover:trasition duration-500 ease-in-out hover:scale-150"
+          className="hover:trasition duration-500 ease-in-out hover:scale-125"
         />
       </div>
     </div>

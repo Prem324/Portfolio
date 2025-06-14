@@ -23,7 +23,7 @@
 
 .nav-underline::after {
   content: "";
-  @apply absolute bottom-0 left-0 h-[2px] w-0 rounded-[16px] bg-purple-400 transition-all duration-300 ease-out;
+  @apply absolute bottom-0 left-0 h-[2px] w-0 rounded-[16px] bg-violet-700 transition-all duration-300 ease-out;
   z-index: -1;
 }
 
