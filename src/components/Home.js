@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Typewriter from "typewriter-effect";
 import Tilt from "react-parallax-tilt";
 import ProfilePhoto from "../assets/Prem-Profile.png";
@@ -8,9 +10,18 @@ import { MdEmail } from "react-icons/md";
 import Coder from "../assets/coder.png";
 
 function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <div className="font-roboto">
-      <div className="flex items-center justify-center px-40 py-10 mt-16">
+      <div
+        data-aos="fade-up"
+        className="flex items-center justify-center px-40 py-10 mt-16"
+      >
         <div className="w-[50%] flex flex-col gap-6">
           <h1 className="text-4xl pb-4">
             Hi There! <span className="wave">👋🏻</span>
@@ -46,7 +57,7 @@ function Home() {
         </div>
       </div>
       <br />
-      <div className="flex px-36 py-10 mt-32">
+      <div data-aos="fade-up" className="flex px-36 py-10 mt-32">
         <div className="w-[30%] flex justify-center">
           <img
             src={Coder}
@@ -84,7 +95,10 @@ function Home() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center px-40 py-10 gap-1">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col items-center justify-center px-40 py-10 gap-1"
+      >
         <h1 className="text-4xl">FIND ME ON</h1>
         <p className="text-xl">
           Feel free to <span className="text-violet-700">connect</span> with me

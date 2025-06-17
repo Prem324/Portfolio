@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Link } from "react-router";
 import {
   IoMdHome,
@@ -9,8 +12,17 @@ import {
 import { PiCertificateFill } from "react-icons/pi";
 
 function Header() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
-    <nav className="border border-t-2 border-cyan-50 fixed top-0 w-full z-50 flex justify-evenly items-center p-4 backdrop-blur-xl bg-opacity-80">
+    <nav
+      data-aos="fade-up"
+      className="border border-t-2 border-cyan-50 fixed top-0 w-full z-50 flex justify-evenly items-center p-4 backdrop-blur-xl bg-opacity-80"
+    >
       <h3 className="font-caveat text-6xl">
         <Link to="/">Portfolio</Link>
       </h3>

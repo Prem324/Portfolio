@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import ReactFlipCard from "reactjs-flip-card";
 import { skills } from "../data/SkillsData";
 import Sketch from "../assets/sketch.svg";
 
 function Skills() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
-    <div className="flex flex-col items-center justify-center gap-6 px-40 py-10 mt-16 mb-16 font-roboto">
+    <div
+      data-aos="fade-up"
+      className="flex flex-col items-center justify-center gap-6 px-40 py-10 mt-16 mb-16 font-roboto"
+    >
       <div className="flex flex-col items-center gap-6">
         <div>
           <h1 className="text-4xl font-medium">
@@ -42,7 +53,7 @@ function Skills() {
       </div>
       <br />
       <hr className="bg-gray-400 h-[2px] w-[100%]" />
-      <div className="flex flex-col items-center gap-6">
+      <div data-aos="fade-up" className="flex flex-col items-center gap-6">
         <div>
           <h1 className="text-4xl font-medium mt-10">
             <span className="text-violet-700">Tools </span>I use

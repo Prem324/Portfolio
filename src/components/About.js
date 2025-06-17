@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Developer from "../assets/about.png";
 import Sketch from "../assets/sketch.svg";
 
 function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
-    <div className="flex items-center justify-center px-40 py-10 font-roboto pt-32 pb-28">
+    <div
+      data-aos="fade-up"
+      className="flex items-center justify-center px-40 py-10 font-roboto pt-32 pb-28"
+    >
       <div className="w-[70%] flex flex-col gap-6">
         <div className="flex flex-col items-center">
           <h1 className="text-4xl text-center mb-2 font-medium">

@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tilt from "react-parallax-tilt";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import NxtwaveLogo from "../assets/nxtwave.png";
-import AdityaLogo from "../assets/Aditya-logo-removebg-preview.png";
-import PRLogo from "../assets/pg-logo-removebg-preview.png";
+import AdityaLogo from "../assets/Aditya-logo.png";
+import PRLogo from "../assets/pg-logo.png";
 import MplSchool from "../assets/mpl high school.png";
 import Sketch from "../assets/sketch.svg";
 
 function Education() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
-    <div className="flex flex-col gap-16 px-40 py-10 font-roboto pt-28 pb-28">
+    <div
+      data-aos="fade-up"
+      className="flex flex-col gap-16 px-40 py-10 font-roboto pt-28 pb-28"
+    >
       <div className="flex flex-col items-center">
         <h1 className="text-4xl font-medium">
           My <span className="text-violet-700">Educational</span> Journey
@@ -19,7 +30,7 @@ function Education() {
           className="text4xl w-auto scale-y-[1] mr-14"
         />
       </div>
-      <div className="flex items-center">
+      <div data-aos="fade-up" className="flex items-center">
         <div className="w-[70%] flex flex-col gap-2">
           <h1 className="text-xl font-medium">
             <span className="text-violet-700">NXTWAVE</span> DISRUPTIVE
@@ -44,7 +55,7 @@ function Education() {
       </div>
       <hr className="bg-gray-400 h-[2px]" />
 
-      <div className="flex items-center">
+      <div data-aos="fade-up" className="flex items-center">
         <div className="w-[50%]">
           <Tilt>
             <img
@@ -65,7 +76,7 @@ function Education() {
         </div>
       </div>
       <hr className="bg-gray-400 h-[2px]" />
-      <div className="flex items-center">
+      <div data-aos="fade-up" className="flex items-center">
         <div className="w-[70%] flex flex-col gap-2">
           <h1 className="text-xl font-medium">
             <span className="text-violet-700">PITHAPUR RAJA'S</span> GOVT JUNIOR
@@ -87,7 +98,7 @@ function Education() {
       </div>
       <hr className="bg-gray-400 h-[2px]" />
 
-      <div className="flex items-center">
+      <div data-aos="fade-up" className="flex items-center">
         <div className="w-[50%]">
           <Tilt>
             <img
